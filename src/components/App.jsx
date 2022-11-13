@@ -1,16 +1,30 @@
+import { Routes, Route } from 'react-router-dom';
+import { getJobs } from 'services/jobsApi';
+import { useState, useEffect } from 'react';
+import { JobBoard } from '../pages/JobBoard';
+import { JobDetails } from 'pages/JobDetails';
+
 export const App = () => {
+  const [jobs, setJobs] = useState(
+    JSON.parse(localStorage.getItem('jobs')) ?? []
+  );
+
+  useEffect(() => {
+    getJobs()
+      .then(setJobs)
+      .catch(error => console.log(error));
+  }, []);
+
+  localStorage.setItem('jobs', JSON.stringify(jobs));
+
+  const localJobs = JSON.parse(localStorage.getItem('jobs'));
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<JobBoard jobs={localJobs} />} />
+        <Route path="/:jobId" element={<JobDetails jobs={localJobs} />} />
+        <Route path="*" element={<JobBoard />} />
+      </Routes>
     </div>
   );
 };
