@@ -2,8 +2,10 @@ import { GoogleMap, Marker } from '@react-google-maps/api';
 import { useRef, useCallback } from 'react';
 export const Map = ({ center }) => {
   const containerStyle = {
-    width: '400px',
-    height: '400px',
+    width: '100%',
+    height: '100%',
+    borderBottomRightRadius: '6px',
+    borderBottomLeftRadius: '6px',
   };
 
   const defaultOptions = {
@@ -157,7 +159,7 @@ export const Map = ({ center }) => {
   }, []);
 
   return (
-    <div>
+    <div className="w-[352px] h-[218px] rounded-b-md">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
