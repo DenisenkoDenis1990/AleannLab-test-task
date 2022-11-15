@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/AleannLab-test-task/static/css/main.e7a16658.css",
-    "main.js": "/AleannLab-test-task/static/js/main.d132baee.js",
+    "main.css": "/AleannLab-test-task/static/css/main.8c068f27.css",
+    "main.js": "/AleannLab-test-task/static/js/main.e24846d6.js",
+    "static/media/RatingBig.svg": "/AleannLab-test-task/static/media/RatingBig.0b18d462ee8c7e57cb3e03fd68f9b534.svg",
     "index.html": "/AleannLab-test-task/index.html",
-    "main.e7a16658.css.map": "/AleannLab-test-task/static/css/main.e7a16658.css.map",
-    "main.d132baee.js.map": "/AleannLab-test-task/static/js/main.d132baee.js.map"
+    "main.8c068f27.css.map": "/AleannLab-test-task/static/css/main.8c068f27.css.map",
+    "main.e24846d6.js.map": "/AleannLab-test-task/static/js/main.e24846d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7a16658.css",
-    "static/js/main.d132baee.js"
+    "static/css/main.8c068f27.css",
+    "static/js/main.e24846d6.js"
   ]
 }
