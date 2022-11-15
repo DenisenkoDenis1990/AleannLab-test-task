@@ -20,6 +20,20 @@ export const JobDetails = ({ jobs }) => {
     return job;
   });
 
+  // const splitedDescriptionArray = selectedJob.description.split('\n  \n');
+
+  // const markUp = splitedDescriptionArray.map(item => {
+  //   if (item.includes('Responsopilities:')) {
+  //     const subStringArray = item.split('\n    ');
+  //     subStringArray.map(substring => {
+  //       console.log(substring);
+  //       return substring;
+  //     });
+  //   }
+  //   return item;
+  // });
+  //console.log(splitedDescriptionArray);
+
   const center = {
     lat: selectedJob.location.lat,
     lng: selectedJob.location.long,
