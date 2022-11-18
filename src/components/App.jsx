@@ -13,7 +13,7 @@ export const App = () => {
     getJobs()
       .then(setJobs)
       .catch(error => console.log(error));
-  }, []);
+  }, [jobs]);
 
   localStorage.setItem('jobs', JSON.stringify(jobs));
 

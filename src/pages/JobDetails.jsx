@@ -1,17 +1,19 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { Star } from 'components/icons/Star';
-import { Share } from 'components/icons/Share';
-import { Location } from 'components/icons/Location';
-import { Map } from 'components/Map';
-import { Bookmark } from 'components/icons/Bookmark';
-import { useJsApiLoader } from '@react-google-maps/api';
-import { MdOutlineArrowBackIos } from 'react-icons/md';
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { useParams } from 'react-router-dom';
+// import { ReactComponent as Location } from 'components/icons/Location.svg';
+// import { Map } from 'components/Map';
+// import { useJsApiLoader } from '@react-google-maps/api';
+import { JobDetailsHeader } from 'components/JobDetailsHeader';
+import { ApplyNowButton } from 'components/ApplyNowButton';
+import { JobInfo } from 'components/JobInfo';
+import { JobDescription } from 'components/JobDescription';
+import { AttachedImages } from 'components/AttachedImages';
+import { AdditionalInfo } from 'components/AdditionalInfo';
+import { BackToJobListBtn } from 'components/BackToJobListBtn';
+import { ContactInfo } from 'components/ContactInfo';
+// const API_KEY = process.env.REACT_APP_API_KEY;
 export const JobDetails = ({ jobs }) => {
   const { jobId } = useParams();
-  let currentDate = new Date();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const selectedJob = jobs.find(job => {
     if (job.id !== jobId) {
@@ -20,66 +22,31 @@ export const JobDetails = ({ jobs }) => {
     return job;
   });
 
-  // const splitedDescriptionArray = selectedJob.description.split('\n  \n');
+  // const center = {
+  //   lat: selectedJob.location.lat,
+  //   lng: selectedJob.location.long,
+  // };
 
-  // const markUp = splitedDescriptionArray.map(item => {
-  //   if (item.includes('Responsopilities:')) {
-  //     const subStringArray = item.split('\n    ');
-  //     subStringArray.map(substring => {
-  //       console.log(substring);
-  //       return substring;
-  //     });
-  //   }
-  //   return item;
+  // const { isLoaded } = useJsApiLoader({
+  //   id: 'google-map-script',
+  //   googleMapsApiKey: API_KEY,
   // });
-  //console.log(splitedDescriptionArray);
 
-  const center = {
-    lat: selectedJob.location.lat,
-    lng: selectedJob.location.long,
-  };
-
-  let updatedDate = new Date(selectedJob.updatedAt);
-
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: API_KEY,
-  });
-
-  const handleSubmit = () => {
-    navigate('/', { replace: true });
-  };
+  // const handleSubmit = () => {
+  //   navigate('/', { replace: true });
+  // };
 
   return (
     <div className="ml-auto mr-auto pl-15 px-4 w-[384px] xl:w-[1347px] xl:flex">
       <div className="xl:mr-[82px]">
-        <div className="mt-6 xl:mt-[56px] mb-[32px] xl:mb-[39px] xl:flex xl:items-center xl:justify-between xl:border-b-[1px] xl:border-b-[#3A4562]/[0.13] xl:ml-[89px]">
-          <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] xl:border-0 mb-[24px] xl:mb-0">
-            Job Details
-          </h2>
-          <ul className="flex ">
-            <li className="flex items-center mr-[36px]">
-              <div className="xl:hidden">
-                <Star />
-              </div>
-              <div className="hidden xl:inline-block">
-                <Bookmark />
-              </div>
-              <span className="ml-[10px]">Save to my list</span>
-            </li>
-            <li className="flex items-center">
-              <Share />
-              <span className="ml-[10px]">Share</span>
-            </li>
-          </ul>
-        </div>
-        <button
-          type="button"
-          className="hidden xl:inline-block text-center ml-[89px] py-[18px] px-[30px] bg-[#384564] text-white rounded-lg mb-[32px] "
-        >
-          APPLY NOW
-        </button>
-        <div className="xl:flex xl:justify-between xl:ml-[89px]">
+        <JobDetailsHeader />
+        <ApplyNowButton />
+        <JobInfo
+          title={selectedJob.title}
+          updatedAt={selectedJob.updatedAt}
+          salary={selectedJob.salary}
+        />
+        {/* <div className="xl:flex xl:justify-between xl:ml-[89px]">
           <div>
             <h2 className="text-lg font-bold tracking-[-0.75px] mb-[5px] xl:pr-[80px]">
               {selectedJob.title}
@@ -109,10 +76,9 @@ export const JobDetails = ({ jobs }) => {
               </p>
             </div>
           </div>
-        </div>
-        <p className="text-base text-[#38415D]/[0.82] xl:text-[#3A4562] tracking-[-0.5625px] font-normal mb-[30px] xl:ml-[89px]">
-          {selectedJob.description}
-        </p>
+        </div> */}
+        <JobDescription description={selectedJob.description} />
+        {/* <ApplyNowButton /> */}
         <button
           type="button"
           className="text-center flex xl:inline mx-auto py-[18px] px-[30px] bg-[#384564] text-white rounded-lg mb-[135px] xl:mb-[86px] xl:ml-[89px]"
@@ -120,7 +86,7 @@ export const JobDetails = ({ jobs }) => {
           APPLY NOW
         </button>
         <div className="xl:flex xl:flex-col-reverse	xl:ml-[89px]">
-          <div className="mb-[64px]">
+          {/* <div className="mb-[64px]">
             <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] mb-[20px] xl:mb-[15px]">
               Attached Images
             </h2>
@@ -137,8 +103,9 @@ export const JobDetails = ({ jobs }) => {
                 );
               })}
             </ul>
-          </div>
-          <div className="mb-[63px]">
+          </div> */}
+          <AttachedImages images={selectedJob.pictures} />
+          {/* <div className="mb-[63px]">
             <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] mb-[15px]">
               Additional info
             </h2>
@@ -172,17 +139,22 @@ export const JobDetails = ({ jobs }) => {
                 );
               })}
             </ul>
-          </div>
+          </div> */}
+          <AdditionalInfo
+            employment_type={selectedJob.employment_type}
+            benefits={selectedJob.benefits}
+          />
         </div>
-        <button
+        {/* <button
           onClick={handleSubmit}
           className="hidden xl:flex items-center bg-[#384564]/[0.14] rounded-lg py-[18px] px-[26px] text-[12px] leading-4 font-semibold mb-[162px]"
         >
           <MdOutlineArrowBackIos className="mr-[19px]" />
           BACK TO JOB BOARD
-        </button>
+        </button> */}
+        <BackToJobListBtn />
       </div>
-      <div className="xl:mt-[56px]">
+      {/* <div className="xl:mt-[56px]">
         <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] mb-[21px] xl:hidden">
           Contacts
         </h2>
@@ -219,7 +191,14 @@ export const JobDetails = ({ jobs }) => {
           </ul>
         </div>
         {isLoaded ? <Map center={center} /> : <p>Loading...</p>}
-      </div>
+      </div> */}
+      <ContactInfo
+        name={selectedJob.name}
+        address={selectedJob.address}
+        phone={selectedJob.phone}
+        email={selectedJob.email}
+        location={selectedJob.location}
+      />
     </div>
   );
 };

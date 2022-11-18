@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Rating } from './icons/Rating';
-import { Location } from './icons/Location';
-import { Bookmark } from './icons/Bookmark';
+import { ReactComponent as Location } from './icons/Location.svg';
+import { ReactComponent as Bookmark } from './icons/Bookmark.svg';
 import { ReactComponent as RatingBig } from './icons/RatingBig.svg';
 export const JobList = ({ jobs }) => {
   const location = useLocation();

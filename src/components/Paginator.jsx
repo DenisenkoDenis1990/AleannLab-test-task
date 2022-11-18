@@ -1,5 +1,5 @@
-import { ArrowLeft } from './icons/ArrowLeft';
-import { ArrowRight } from './icons/ArrowRight';
+import { ReactComponent as ArrowLeft } from './icons/ArrowLeft.svg';
+import { ReactComponent as ArrowRight } from './icons/ArrowRight.svg';
 export const Paginator = () => {
   return (
     <div className="flex justify-center items-center bg-white rounded-lg xl:px-[24px] xl:w-[515px] xl:mx-auto">
