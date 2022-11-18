@@ -1,4 +1,4 @@
-import { GoogleMap, Marker } from '@react-google-maps/api';
+import { GoogleMap, MarkerF } from '@react-google-maps/api';
 import { useRef, useCallback } from 'react';
 import { defaultOptions, containerStyle } from 'services/mapUtils';
 export const Map = ({ center }) => {
@@ -169,7 +169,7 @@ export const Map = ({ center }) => {
         onUnmount={onUnmount}
         options={defaultOptions}
       >
-        <Marker position={center} />
+        <MarkerF position={center} />
       </GoogleMap>
     </div>
   );
