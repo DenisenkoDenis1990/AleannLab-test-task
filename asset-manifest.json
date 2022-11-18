@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/AleannLab-test-task/static/css/main.8c068f27.css",
-    "main.js": "/AleannLab-test-task/static/js/main.e24846d6.js",
+    "main.css": "/AleannLab-test-task/static/css/main.5d62ee6d.css",
+    "main.js": "/AleannLab-test-task/static/js/main.3ec13666.js",
     "static/media/RatingBig.svg": "/AleannLab-test-task/static/media/RatingBig.0b18d462ee8c7e57cb3e03fd68f9b534.svg",
     "index.html": "/AleannLab-test-task/index.html",
-    "main.8c068f27.css.map": "/AleannLab-test-task/static/css/main.8c068f27.css.map",
-    "main.e24846d6.js.map": "/AleannLab-test-task/static/js/main.e24846d6.js.map"
+    "static/media/Share.svg": "/AleannLab-test-task/static/media/Share.14f9ee50b9d134666b10f63dc344ff6b.svg",
+    "static/media/ArrowRight.svg": "/AleannLab-test-task/static/media/ArrowRight.2f94d2a278201094891c4ba3833813db.svg",
+    "static/media/ArrowLeft.svg": "/AleannLab-test-task/static/media/ArrowLeft.f689c1151eb75b1aad3b814a39501c12.svg",
+    "static/media/Bookmark.svg": "/AleannLab-test-task/static/media/Bookmark.2aaeb9ed121c166915fe225b4885147f.svg",
+    "static/media/Location.svg": "/AleannLab-test-task/static/media/Location.1c093ca173a538132f1ce31ab6296061.svg",
+    "main.5d62ee6d.css.map": "/AleannLab-test-task/static/css/main.5d62ee6d.css.map",
+    "main.3ec13666.js.map": "/AleannLab-test-task/static/js/main.3ec13666.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c068f27.css",
-    "static/js/main.e24846d6.js"
+    "static/css/main.5d62ee6d.css",
+    "static/js/main.3ec13666.js"
   ]
 }
