@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AleannLab-test-task/static/css/main.5d62ee6d.css",
+    "main.css": "/AleannLab-test-task/static/css/main.13e87f19.css",
     "main.js": "/AleannLab-test-task/static/js/main.bbe0c532.js",
     "static/media/RatingBig.svg": "/AleannLab-test-task/static/media/RatingBig.0b18d462ee8c7e57cb3e03fd68f9b534.svg",
     "index.html": "/AleannLab-test-task/index.html",
@@ -9,11 +9,11 @@
     "static/media/ArrowLeft.svg": "/AleannLab-test-task/static/media/ArrowLeft.f689c1151eb75b1aad3b814a39501c12.svg",
     "static/media/Bookmark.svg": "/AleannLab-test-task/static/media/Bookmark.2aaeb9ed121c166915fe225b4885147f.svg",
     "static/media/Location.svg": "/AleannLab-test-task/static/media/Location.1c093ca173a538132f1ce31ab6296061.svg",
-    "main.5d62ee6d.css.map": "/AleannLab-test-task/static/css/main.5d62ee6d.css.map",
+    "main.13e87f19.css.map": "/AleannLab-test-task/static/css/main.13e87f19.css.map",
     "main.bbe0c532.js.map": "/AleannLab-test-task/static/js/main.bbe0c532.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d62ee6d.css",
+    "static/css/main.13e87f19.css",
     "static/js/main.bbe0c532.js"
   ]
 }
