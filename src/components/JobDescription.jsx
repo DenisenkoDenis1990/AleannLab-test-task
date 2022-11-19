@@ -6,7 +6,7 @@ export const JobDescription = ({ description }) => {
   let benefitsArray = '';
   let benefitsItems = '';
 
-  splitedDescriptionArray.map(element => {
+  splitedDescriptionArray.forEach(element => {
     if (element.includes('Responsopilities')) {
       resposibilitiesArray = element.split('\n');
     } else if (element.includes('Compensation & Benefits')) {
