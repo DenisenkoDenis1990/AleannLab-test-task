@@ -14,3 +14,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.section-title {
+  @apply text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13];
+}
+
+.apply-btn {
+  @apply py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center;
+}
+
+/* .section-title {
+  Apply No - py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center hidden xl:inline-block ml-[89px] mb-[32px] 
+             py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center flex xl:inline mx-auto mb-[135px] xl:mb-[86px] xl:ml-[89px]
+
+} */

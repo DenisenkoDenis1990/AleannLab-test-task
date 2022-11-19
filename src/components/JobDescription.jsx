@@ -1,23 +1,62 @@
+import { ReactComponent as Bullet } from './icons/Bullet.svg';
 export const JobDescription = ({ description }) => {
-  // const splitedDescriptionArray = selectedJob.description.split('\n  \n');
-  // let text = '';
-  // let resposibilitiesArray = '';
-  // let benefitsArray = '';
+  const splitedDescriptionArray = description.split('\n  \n');
+  let text = '';
+  let resposibilitiesArray = '';
+  let benefitsArray = '';
+  let benefitsItems = '';
 
-  // splitedDescriptionArray.forEach(element => {
-  //   if (element.includes('Responsopilities')) {
-  //     resposibilitiesArray = element.split('\n');
-  //   } else if (element.includes('Compensation & Benefits')) {
-  //     benefitsArray = element.split('\n\t');
-  //   } else {
-  //     text = element;
-  //   }
-  // });
-  // console.log(resposibilitiesArray);
+  splitedDescriptionArray.map(element => {
+    if (element.includes('Responsopilities')) {
+      resposibilitiesArray = element.split('\n');
+    } else if (element.includes('Compensation & Benefits')) {
+      benefitsArray = element.split('\n\t');
+    } else {
+      text = element.toString();
+    }
+  });
 
   return (
-    <p className="text-base text-[#38415D]/[0.82] xl:text-[#3A4562] tracking-[-0.5625px] font-normal mb-[30px] xl:ml-[89px]">
-      {description}
-    </p>
+    <div className="text-base text-[#38415D]/[0.82] xl:text-[#3A4562] tracking-[-0.5625px] font-normal mb-[30px] xl:ml-[89px]">
+      <p className="mb-[46px]">{text}</p>
+      <div>
+        {resposibilitiesArray.map((item, index) => {
+          if (index === 0) {
+            return (
+              <h3 className="text-[20px] leading-[25px] font-bold tracking-[-0.625px] mb-[20px]">
+                {item}
+              </h3>
+            );
+          }
+          return <p className="mb-[46px]">{item}</p>;
+        })}
+      </div>
+      <div>
+        {benefitsArray.map((item, index) => {
+          if (index === 0) {
+            return (
+              <h3 className="text-[20px] leading-[25px] font-bold tracking-[-0.625px] mb-[20px]">
+                {item}
+              </h3>
+            );
+          } else {
+            benefitsItems = item.split('.');
+            benefitsItems.pop();
+            return (
+              <ul>
+                {benefitsItems.map(item => {
+                  return (
+                    <li>
+                      <Bullet className="inline-block mr-[10px]" />
+                      {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            );
+          }
+        })}
+      </div>
+    </div>
   );
 };

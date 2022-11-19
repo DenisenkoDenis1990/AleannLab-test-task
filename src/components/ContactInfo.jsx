@@ -13,9 +13,7 @@ export const ContactInfo = ({ name, address, phone, email, location }) => {
   };
   return (
     <div className="xl:mt-[56px]">
-      <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] mb-[21px] xl:hidden">
-        Contacts
-      </h2>
+      <h2 className="section-title mb-[21px] xl:hidden">Contacts</h2>
       <div className="pl-[62px] py-[31px] bg-[#2A3047] rounded-t-md ">
         <p className="text-[#E7EAF0] text-[16px] font-bold tracking-[0.23619px] leading-5 mb-[17px]">
           {name}

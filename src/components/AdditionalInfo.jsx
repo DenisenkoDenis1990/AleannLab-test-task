@@ -1,9 +1,7 @@
 export const AdditionalInfo = ({ employment_type, benefits }) => {
   return (
     <div className="mb-[63px]">
-      <h2 className="text-xl font-bold text-[#3A4562] pb-2.5 border-b-[1px] border-b-[#3A4562]/[0.13] mb-[15px]">
-        Additional info
-      </h2>
+      <h2 className="section-title mb-[15px]">Additional info</h2>
       <p className="text-base text-[#38415D]/[0.82] tracking-[-0.5625px] font-normal mb-[10px]">
         Employment type
       </p>

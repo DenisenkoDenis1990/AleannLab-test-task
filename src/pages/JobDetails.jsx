@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { JobDetailsHeader } from 'components/JobDetailsHeader';
-import { ApplyNowButton } from 'components/ApplyNowButton';
 import { JobInfo } from 'components/JobInfo';
 import { JobDescription } from 'components/JobDescription';
 import { AttachedImages } from 'components/AttachedImages';
@@ -21,7 +20,12 @@ export const JobDetails = ({ jobs }) => {
     <div className="ml-auto mr-auto pl-15 px-4 w-[384px] xl:w-[1347px] xl:flex">
       <div className="xl:mr-[82px]">
         <JobDetailsHeader />
-        <ApplyNowButton />
+        <button
+          type="button"
+          className="apply-btn hidden xl:inline-block ml-[89px] mb-[32px]"
+        >
+          APPLY NOW
+        </button>
         <JobInfo
           title={selectedJob.title}
           updatedAt={selectedJob.updatedAt}
@@ -31,7 +35,7 @@ export const JobDetails = ({ jobs }) => {
         {/* <ApplyNowButton /> */}
         <button
           type="button"
-          className="text-center flex xl:inline mx-auto py-[18px] px-[30px] bg-[#384564] text-white rounded-lg mb-[135px] xl:mb-[86px] xl:ml-[89px]"
+          className="apply-btn flex xl:inline mx-auto mb-[135px] xl:mb-[86px] xl:ml-[89px]"
         >
           APPLY NOW
         </button>
