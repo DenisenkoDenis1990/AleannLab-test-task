@@ -1,4 +1,4 @@
-import { JobListItem } from './JobListItem';
+import { JobListItem } from '../JobListItem/JobListItem';
 export const JobList = ({ jobs }) => {
   return (
     <div>

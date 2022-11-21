@@ -1,6 +1,6 @@
 import { FaRegStar } from 'react-icons/fa';
-import { ReactComponent as Bookmark } from './icons/Bookmark.svg';
-import { ReactComponent as Share } from './icons/Share.svg';
+import { ReactComponent as Bookmark } from '../icons/Bookmark.svg';
+import { ReactComponent as Share } from '../icons/Share.svg';
 export const JobDetailsHeader = () => {
   return (
     <div className="job-details-header-conteiner">

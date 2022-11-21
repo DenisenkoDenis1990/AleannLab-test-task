@@ -1,6 +1,6 @@
 import { ReactComponent as Location } from 'components/icons/Location.svg';
 import { useJsApiLoader } from '@react-google-maps/api';
-import { Map } from './Map';
+import { Map } from '../Map/Map';
 const API_KEY = 'AIzaSyAcXzkVBqgwyygUH1d8u0_NsyN8qSGr2ew';
 export const ContactInfo = ({ name, address, phone, email, location }) => {
   const { isLoaded } = useJsApiLoader({

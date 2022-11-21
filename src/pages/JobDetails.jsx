@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { JobDetailsHeader } from 'components/JobDetailsHeader';
-import { JobInfo } from 'components/JobInfo';
-import { JobDescription } from 'components/JobDescription';
-import { AttachedImages } from 'components/AttachedImages';
-import { AdditionalInfo } from 'components/AdditionalInfo';
-import { BackToJobListBtn } from 'components/BackToJobListBtn';
-import { ContactInfo } from 'components/ContactInfo';
+import { JobDetailsHeader } from 'components/JobDetailsHeader/JobDetailsHeader';
+import { JobInfo } from 'components/JobInfo/JobInfo';
+import { JobDescription } from 'components/JobDescription/JobDescription';
+import { AttachedImages } from 'components/AttachedImages/AttachedImages';
+import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
+import { BackToJobListBtn } from 'components/BackToJobListBtn/BackToJobListBtn';
+import { ContactInfo } from 'components/ContactInfo/ContactInfo';
 export const JobDetails = ({ jobs }) => {
   const { jobId } = useParams();
 

@@ -1,5 +1,5 @@
-import { ReactComponent as ArrowLeft } from './icons/ArrowLeft.svg';
-import { ReactComponent as ArrowRight } from './icons/ArrowRight.svg';
+import { ReactComponent as ArrowLeft } from '../icons/ArrowLeft.svg';
+import { ReactComponent as ArrowRight } from '../icons/ArrowRight.svg';
 export const Paginator = () => {
   return (
     <div className="paginator-conteiner">

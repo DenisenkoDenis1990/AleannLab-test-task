@@ -1,4 +1,4 @@
-import { ReactComponent as Bullet } from './icons/Bullet.svg';
+import { ReactComponent as Bullet } from '../icons/Bullet.svg';
 export const JobDescription = ({ description }) => {
   const splitedDescriptionArray = description.split('\n  \n');
   let text = '';
@@ -22,15 +22,27 @@ export const JobDescription = ({ description }) => {
       <div>
         {resposibilitiesArray.map((item, index) => {
           if (index === 0) {
-            return <h3 className="description-subtitles">{item}</h3>;
+            return (
+              <h3 className="description-subtitles" key={index}>
+                {item}
+              </h3>
+            );
           }
-          return <p className="mb-[46px]">{item}</p>;
+          return (
+            <p className="mb-[46px]" key={index}>
+              {item}
+            </p>
+          );
         })}
       </div>
       <div>
         {benefitsArray.map((item, index) => {
           if (index === 0) {
-            return <h3 className="description-subtitles">{item}</h3>;
+            return (
+              <h3 className="description-subtitles" key={index}>
+                {item}
+              </h3>
+            );
           } else {
             benefitsItems = item.split('.');
             benefitsItems.pop();
@@ -38,7 +50,7 @@ export const JobDescription = ({ description }) => {
               <ul>
                 {benefitsItems.map(item => {
                   return (
-                    <li>
+                    <li key={item}>
                       <Bullet className="inline-block mr-[10px]" />
                       {item}
                     </li>

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { ReactComponent as Rating } from './icons/Rating.svg';
-import { ReactComponent as Location } from './icons/Location.svg';
-import { ReactComponent as Bookmark } from './icons/Bookmark.svg';
-import { ReactComponent as RatingBig } from './icons/RatingBig.svg';
+import { ReactComponent as Rating } from '../icons/Rating.svg';
+import { ReactComponent as Location } from '../icons/Location.svg';
+import { ReactComponent as Bookmark } from '../icons/Bookmark.svg';
+import { ReactComponent as RatingBig } from '../icons/RatingBig.svg';
 import { getTimeFromLastUpdate } from 'services/getTimeFromLastUpdate';
 
 export const JobListItem = ({ job }) => {
