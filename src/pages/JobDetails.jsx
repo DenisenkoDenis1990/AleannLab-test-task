@@ -32,7 +32,6 @@ export const JobDetails = ({ jobs }) => {
           salary={selectedJob.salary}
         />
         <JobDescription description={selectedJob.description} />
-        {/* <ApplyNowButton /> */}
         <button
           type="button"
           className="apply-btn flex xl:inline mx-auto mb-[135px] xl:mb-[86px] xl:ml-[89px]"

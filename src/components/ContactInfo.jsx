@@ -15,31 +15,22 @@ export const ContactInfo = ({ name, address, phone, email, location }) => {
     <div className="xl:mt-[56px]">
       <h2 className="section-title mb-[21px] xl:hidden">Contacts</h2>
       <div className="pl-[62px] py-[31px] bg-[#2A3047] rounded-t-md ">
-        <p className="text-[#E7EAF0] text-[16px] font-bold tracking-[0.23619px] leading-5 mb-[17px]">
+        <p className="text-[#E7EAF0] text-[16px] font-bold tracking-[0.23px] leading-5 mb-[17px]">
           {name}
         </p>
         <ul>
           <li className="mb-[6px]">
-            <a
-              href="*"
-              className="flex  text-[#E7EAF0] text-[16px] leading-6 tracking-[-0.5px] font-normal"
-            >
+            <a href="*" className="flex contacts-item text-[#E7EAF0]">
               <Location /> <span className="ml-[8px]">{address}</span>
             </a>
           </li>
           <li className="mb-[6px]">
-            <a
-              href={`tel:${phone}`}
-              className=" text-[#FFFFFF]/[0.6696] text-[16px] leading-6 tracking-[-0.5px] font-normal"
-            >
+            <a href={`tel:${phone}`} className=" contacts-item">
               {phone}
             </a>
           </li>
           <li>
-            <a
-              href={`mailto:${email}`}
-              className=" text-[#FFFFFF]/[0.6696] text-[16px] leading-6 tracking-[-0.5px] font-normal"
-            >
+            <a href={`mailto:${email}`} className=" contacts-item">
               {email}
             </a>
           </li>

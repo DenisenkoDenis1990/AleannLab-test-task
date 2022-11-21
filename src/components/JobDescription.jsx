@@ -17,16 +17,12 @@ export const JobDescription = ({ description }) => {
   });
 
   return (
-    <div className="text-base text-[#38415D]/[0.82] xl:text-[#3A4562] tracking-[-0.5625px] font-normal mb-[30px] xl:ml-[89px]">
+    <div className="description-text">
       <p className="mb-[46px]">{text}</p>
       <div>
         {resposibilitiesArray.map((item, index) => {
           if (index === 0) {
-            return (
-              <h3 className="text-[20px] leading-[25px] font-bold tracking-[-0.625px] mb-[20px]">
-                {item}
-              </h3>
-            );
+            return <h3 className="description-subtitles">{item}</h3>;
           }
           return <p className="mb-[46px]">{item}</p>;
         })}
@@ -34,11 +30,7 @@ export const JobDescription = ({ description }) => {
       <div>
         {benefitsArray.map((item, index) => {
           if (index === 0) {
-            return (
-              <h3 className="text-[20px] leading-[25px] font-bold tracking-[-0.625px] mb-[20px]">
-                {item}
-              </h3>
-            );
+            return <h3 className="description-subtitles">{item}</h3>;
           } else {
             benefitsItems = item.split('.');
             benefitsItems.pop();

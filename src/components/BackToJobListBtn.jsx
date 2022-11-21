@@ -6,10 +6,7 @@ export const BackToJobListBtn = () => {
     navigate('/', { replace: true });
   };
   return (
-    <button
-      onClick={handleSubmit}
-      className="hidden xl:flex items-center bg-[#384564]/[0.14] rounded-lg py-[18px] px-[26px] text-[12px] leading-4 font-semibold mb-[162px]"
-    >
+    <button onClick={handleSubmit} className="back-btn">
       <MdOutlineArrowBackIos className="mr-[19px]" />
       BACK TO JOB BOARD
     </button>

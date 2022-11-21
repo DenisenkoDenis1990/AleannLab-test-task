@@ -23,8 +23,74 @@ code {
   @apply py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center;
 }
 
+.additional-info-subtitle {
+  @apply text-base text-[#38415D]/[0.82] tracking-[-0.5625px] font-normal mb-[10px];
+}
+
+.back-btn {
+  @apply hidden xl:flex items-center bg-[#384564]/[0.14] rounded-lg py-[18px] px-[26px] text-[12px] leading-4 font-semibold mb-[162px];
+}
+
+.description-subtitles {
+  @apply text-[20px] leading-[25px] font-bold tracking-[-0.625px] mb-[20px];
+}
+
+.job-details-header-conteiner {
+  @apply mt-6 xl:mt-[56px] mb-[32px] xl:mb-[39px] xl:flex xl:items-center xl:justify-between xl:border-b-[1px] xl:border-b-[#3A4562]/[0.13] xl:ml-[89px];
+}
+
+.description-text {
+  @apply text-base text-[#38415D]/[0.82] xl:text-[#3A4562] tracking-[-0.5625px] font-normal mb-[30px] xl:ml-[89px];
+}
+
+.brutto-per-year {
+  @apply text-base text-[#38415D]/[0.82] tracking-[-0.5625px] font-normal text-right xl:text-left mb-[4px];
+}
+
+.salary {
+  @apply font-bold text-[20px] leading-[25px] tracking-[-0.625px] text-right xl:text-left;
+}
+
+.job-short-description {
+  @apply text-[#878D9D] text-[16px] tracking-[0.23619px] leading-6 mb-[7px];
+}
+
+.avatar {
+  @apply w-[65px] xl:w-[85px] h-[65px] xl:h-[85px] rounded-full  mr-[19px] ml-[16px] mt-[45px] xl:mt-0 xl:mr-[26px] xl:ml-0 object-cover;
+}
+
+.job-list-item {
+  @apply flex bg-[#EFF0F5] mb-[8px] rounded-lg shadow-md xl:py-[16px] xl:px-[24px] xl:bg-white;
+}
+
+.paginator {
+  @apply flex before:content-[''] before:h-[24px] before:border-r-[1.5px] before:border-[#DEE3EF] before:mr-[42px] before:mt-[8px] before:xl:mr-[55px] before:xl:ml-[27px] after:content-[''] after:h-[24px]  after:border-l-[1.5px] after:border-[#DEE3EF] after:ml-[42px] after:mt-[8px] after:xl:ml-[55px] after:xl:mr-[27px];
+}
+
+.paginator-conteiner {
+  @apply flex justify-center items-center bg-white rounded-lg xl:px-[24px] xl:w-[515px] xl:mx-auto;
+}
+
+@layer components {
+  .contacts-item {
+    @apply text-[#FFFFFF]/[0.6696] text-[16px] leading-6 tracking-[-0.5px] font-normal;
+  }
+
+  .job-posted {
+    @apply xl:hidden text-sm font-light tracking-[0.191905px] text-[#38415D]/[0.602109];
+  }
+  .additional-info-features {
+    @apply text-[16px] text-center tracking-[-0.4px] font-bold py-[17px] w-1/3 mr-[6px] border-[1px] rounded-lg text-[#55699E] bg-[#A1B1DB]/[0.3173] border-[#000000]/[0.12];
+  }
+
+  .pages {
+    @apply text-[16px] font-bold tracking-[1.33333px] leading-[19px] mr-[6px] pt-[9px] pb-[7px] text-[#38415D]/[0.6021]  px-[5px];
+  }
+}
+
 /* .section-title {
-  Apply No - py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center hidden xl:inline-block ml-[89px] mb-[32px] 
-             py-[18px] px-[30px] bg-[#384564] text-white rounded-lg text-center flex xl:inline mx-auto mb-[135px] xl:mb-[86px] xl:ml-[89px]
+  Apply No - text-[16px] font-bold tracking-[1.33333px] leading-[19px] mr-[6px] pt-[9px] pb-[7px] text-[#38415D]/[0.6021]  px-[5px]
+             text-[16px] font-bold tracking-[1.33333px] leading-[19px] mr-[6px] pt-[9px] pb-[7px] text-[#55699E]  px-[10px] border-b-[2px] border-b-[#55699E]
+             text-[16px] font-bold tracking-[1.33333px] leading-[19px] mr-[6px] text-[#38415D]/[0.6021]    px-[5px]
 
 } */
